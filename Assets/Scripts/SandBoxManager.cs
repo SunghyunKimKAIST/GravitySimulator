@@ -4,6 +4,19 @@ using UnityEngine.UI;
 
 public class SandBoxManager : GameManager
 {
+    public InputField durationInput;
+    protected override float _duration
+    {
+        get
+        {
+            Debug.Log("sand box manager _duration get");
+            if (float.TryParse(durationInput.text, out float f))
+                return f;
+            else
+                return duration;
+        }
+    }
+
     protected override void Start()
     {
         base.Start();

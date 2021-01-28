@@ -31,6 +31,9 @@ public abstract class GameManager : MonoBehaviour
 
     public GameObject endButton;
 
+    public float duration;
+    protected virtual float _duration => duration;
+
     const string FLOAT_FORMAT = "F8";
 
     NamedPipeClientStream stream;
@@ -82,7 +85,7 @@ public abstract class GameManager : MonoBehaviour
 
         StringBuilder writeString = new StringBuilder();
 
-        // writeString.AppendLine(particles.Length.ToString());
+        writeString.AppendLine(_duration.ToString());
         for (int i = 0; i < transforms.Length; i++)
         {
             writeString.AppendLine(transforms[i].position.x.ToString(FLOAT_FORMAT));
@@ -106,6 +109,9 @@ public abstract class GameManager : MonoBehaviour
             simulating = true;
             calcEnded = null;
             progressCircle.SetActive(false);
+
+            foreach(Transform tf in transforms)
+                tf.GetComponent<TrailRenderer>().enabled = true;
         }
     }
 
