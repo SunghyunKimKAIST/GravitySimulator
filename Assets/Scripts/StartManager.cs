@@ -7,4 +7,9 @@ public class StartManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void Stage1()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
