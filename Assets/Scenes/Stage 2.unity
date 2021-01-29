@@ -765,7 +765,7 @@ PrefabInstance:
     - target: {fileID: 1678973909178553371, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
       propertyPath: m_Positions.Array.data[1].y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3082979081549008214, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 5707407821425565625, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5707407821425565625, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
@@ -1206,7 +1206,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5707407821671880034}
+      - m_Target: {fileID: 0}
         m_MethodName: SimulationStart
         m_Mode: 1
         m_Arguments:
@@ -2329,7 +2329,7 @@ PrefabInstance:
     - target: {fileID: 1678973909178553371, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
       propertyPath: m_Positions.Array.data[1].y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3082979081549008214, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
@@ -2389,7 +2389,7 @@ PrefabInstance:
     - target: {fileID: 5707407821425565625, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5707407821425565625, guid: 385cae2f9127a3d43bb34fd15d5a277e,
         type: 3}
@@ -2791,11 +2791,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5707407821671880033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ec656b5a1d89044b3cfdb9f38fa0e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c764b7cb9dc2f44fac84066a98fdc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
   gameManager: {fileID: 2136141933}
+  velocity: 2
 --- !u!4 &5707407821671880037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5707407821425565625, guid: 385cae2f9127a3d43bb34fd15d5a277e,

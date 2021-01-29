@@ -5,11 +5,11 @@ public class Particle : MonoBehaviour
     public int index;
     public GameManager gameManager;
 
-    bool started;
+    protected bool started;
 
-    LineRenderer line;
+    protected LineRenderer line;
 
-    bool rightDraging;
+    protected bool rightDraging;
 
     void Start()
     {

@@ -12,4 +12,9 @@ public class StartManager : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void Stage2()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

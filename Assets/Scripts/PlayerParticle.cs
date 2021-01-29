@@ -9,11 +9,11 @@ public class PlayerParticle : Particle
         switch (collision.tag)
         {
             case "Finish":
-                StartCoroutine((gameManager as Stage1Manager).Clear());
+                (gameManager as StageManager).Clear();
                 break;
 
             case "Obstacle":
-                (gameManager as Stage1Manager).Gameover();
+                (gameManager as StageManager).Gameover();
                 break;
         }
     }

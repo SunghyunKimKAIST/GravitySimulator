@@ -44,6 +44,8 @@ public abstract class GameManager : MonoBehaviour
     bool simulating;
     Task<int> calcEnded;
 
+    bool simulationOnce;
+
     public void SetParticleUI()
     {
         particleUI[0].text = transforms[focusing].position.x.ToString(FLOAT_FORMAT);
@@ -62,10 +64,15 @@ public abstract class GameManager : MonoBehaviour
         calcEnded = null;
 
         Focusing = 0;
+        simulationOnce = false;
     }
 
     public virtual void SimulationStart()
     {
+        if (simulationOnce)
+            return;
+        simulationOnce = true;
+
         stream = new NamedPipeClientStream(".", pipeName, PipeDirection.InOut, PipeOptions.None);
         try
         {

@@ -3,11 +3,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Stage1Manager : GameManager
+public class StageManager : GameManager
 {
-    Text endButtonText;
-
     public GameObject clearButton;
+
+    Text endButtonText;
 
     protected override void Start()
     {
@@ -22,14 +22,17 @@ public class Stage1Manager : GameManager
     public override IEnumerator AtEnd()
     {
         yield return new WaitForSeconds(1);
-        endButtonText.text = "Time limit failure";
-        endButton.SetActive(true);
+        if (!endButton.activeSelf)
+        {
+            endButtonText.text = "Time limit failure";
+            endButton.SetActive(true);
+        }
     }
 
-    public IEnumerator Clear()
+    public void Clear()
     {
-        yield return new WaitForSeconds(1);
-        clearButton.SetActive(true);
+        if(!endButton.activeSelf)
+            clearButton.SetActive(true);
     }
 
     public void Gameover()
@@ -39,6 +42,6 @@ public class Stage1Manager : GameManager
 
     public override void Restart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
